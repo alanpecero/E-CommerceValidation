@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../pages/LoginPage');
 const { InventoryPage } = require('../pages/InventoryPage');
@@ -13,7 +14,7 @@ test('Add item to cart and complete checkout', async ({ page }) => {
   const overviewPage = new CheckoutOverviewPage(page);
 
   await loginPage.goto("https://www.saucedemo.com/v1/");
-  await loginPage.login('standard_user', 'secret_sauce');
+  await loginPage.login(process.env.ECOMM_USERNAME, process.env.ECOMM_PASSWORD);
 
   await inventoryPage.addItemToCart();
   await inventoryPage.goToCart();
