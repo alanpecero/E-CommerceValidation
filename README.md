@@ -14,36 +14,21 @@ The following user flows are automated:
 - 🛍️ **Adding items to the cart** and completing checkout.
 - ➕🗑️ **Adding multiple items** to the cart and **removing items** before purchase.
 
-## 📁 Project Structure
-
-E-CommerceValidation/
-├── pages/
-│   ├── LoginPage.js
-│   ├── InventoryPage.js
-│   ├── CartPage.js
-│   ├── CheckoutPage.js
-│   └── CheckoutOverviewPage.js
-├── tests/
-│   ├── login.spec.js
-│   ├── failedLogin.spec.js 
-│   ├── cartModification.spec.js
-│   └── checkout.spec.js
-├── playwright.config.js
-└── package.json
 
 ## SETUP
 
-#Install Dependencies
+Install Dependencies -> 
 npm install
 
-#Install Playwright browsers
+Install Playwright browsers ->
 npx playwright install
 
-#Run all tests
+Run all tests -> 
 npx playwright test
 
-#Run a specific test file
+Run a specific test file -> 
 npx playwright test tests/login.spec.js
 
-##NOTES
+## NOTES
+
 The scripts are designed to be run headlessly by default but can be configured for headed runs for debugging.
